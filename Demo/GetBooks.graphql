@@ -1,0 +1,10 @@
+query GetBooks {
+    books(first: 5, orderBy: { title: DESC }) {
+        items {
+        id
+        pages
+        title
+        year
+        }
+    }
+}

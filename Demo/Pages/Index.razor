@@ -1,0 +1,25 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<UseGetBooks Context="result">
+    <ChildContent>
+        <table>
+            @foreach(var book in result.Books.Items)
+            {
+                <tr>@book.Title</tr>
+                <tr>@book.Pages</tr>
+                <tr>@book.Year</tr>
+            }
+        </table>
+    </ChildContent>
+    <LoadingContent>
+        Loading...
+    </LoadingContent>
+</UseGetBooks>
